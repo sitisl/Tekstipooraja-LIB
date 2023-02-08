@@ -22,6 +22,7 @@ Partial Class formKasutajaAken
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.label1 = New System.Windows.Forms.Label()
         Me.txtSisendtekst = New System.Windows.Forms.TextBox()
         Me.txtValjundTekst1 = New System.Windows.Forms.TextBox()
@@ -32,6 +33,8 @@ Partial Class formKasutajaAken
         Me.btnPoora2 = New System.Windows.Forms.Button()
         Me.btnStart = New System.Windows.Forms.Button()
         Me.btnStop = New System.Windows.Forms.Button()
+        Me.timerUuenda = New System.Windows.Forms.Timer(Me.components)
+        Me.txtCnt = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'label1
@@ -118,11 +121,24 @@ Partial Class formKasutajaAken
         Me.btnStop.Text = "Stop"
         Me.btnStop.UseVisualStyleBackColor = True
         '
+        'timerUuenda
+        '
+        Me.timerUuenda.Interval = 5000
+        '
+        'txtCnt
+        '
+        Me.txtCnt.AutoSize = True
+        Me.txtCnt.Location = New System.Drawing.Point(713, 192)
+        Me.txtCnt.Name = "txtCnt"
+        Me.txtCnt.Size = New System.Drawing.Size(0, 20)
+        Me.txtCnt.TabIndex = 10
+        '
         'formKasutajaAken
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1147, 772)
+        Me.Controls.Add(Me.txtCnt)
         Me.Controls.Add(Me.btnStop)
         Me.Controls.Add(Me.btnStart)
         Me.Controls.Add(Me.btnPoora2)
@@ -150,4 +166,6 @@ Partial Class formKasutajaAken
     Friend WithEvents btnPoora2 As Button
     Friend WithEvents btnStart As Button
     Friend WithEvents btnStop As Button
+    Friend WithEvents timerUuenda As Timer
+    Friend WithEvents txtCnt As Label
 End Class
