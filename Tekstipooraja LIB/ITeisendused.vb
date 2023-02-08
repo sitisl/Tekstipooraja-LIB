@@ -3,7 +3,6 @@
     Property intLopp As Integer  'Viimane symbol
     Property strTekst As String  'Sisestatud tekst
 
-
     Function pooraTekst() As String
     Sub teisendaTekst(ByRef strSisendTekst As String)
 

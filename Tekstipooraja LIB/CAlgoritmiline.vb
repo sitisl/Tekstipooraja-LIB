@@ -4,6 +4,13 @@
     Private intAlgusSymbol As Integer
     Private intLoppSymbol As Integer
     Private strPooratavTekst As String
+    Private Function pooraAlgo(ByRef strPooratavTekst As String)
+        Dim output As String = ""
+        For i = Len(strPooratavTekst) To 1 Step -1
+            output = output & Mid(strPooratavTekst, i, 1)
+        Next
+        Return output
+    End Function
 
     Private Property intAlgus As Integer Implements ITeisendused.intAlgus
         Get
@@ -33,18 +40,15 @@
     End Property
 
     Private Sub teisendaTekst(ByRef strSisendTekst As String) Implements ITeisendused.teisendaTekst
-        Dim output As String = ""
-        For i = Len(strPooratavTekst) To 1 Step -1
-            output = output & Mid(strPooratavTekst, i, 1)
-        Next
-        strPooratavTekst = output
+        strPooratavTekst = pooraAlgo(strSisendTekst)
     End Sub
 
     Private Function pooraTekst() As String Implements ITeisendused.pooraTekst
-        Dim output As String = ""
-        For i = Len(strPooratavTekst) To 1 Step -1
-            output = output & Mid(strPooratavTekst, i, 1)
-        Next
-        Return output
+        'Dim output As String = ""
+        'For i = Len(strPooratavTekst) To 1 Step -1
+        '    output = output & Mid(strPooratavTekst, i, 1)
+        'Next
+        'Return output
+        Return pooraAlgo(strPooratavTekst)
     End Function
 End Class

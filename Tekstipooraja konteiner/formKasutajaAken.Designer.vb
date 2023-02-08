@@ -35,10 +35,8 @@ Partial Class formKasutajaAken
         Me.btnStop = New System.Windows.Forms.Button()
         Me.timerUuenda = New System.Windows.Forms.Timer(Me.components)
         Me.txtCnt = New System.Windows.Forms.Label()
-        Me.btnAlgo = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtValjundTekst3 = New System.Windows.Forms.TextBox()
         Me.CheckBox = New System.Windows.Forms.CheckBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'label1
@@ -137,31 +135,6 @@ Partial Class formKasutajaAken
         Me.txtCnt.Size = New System.Drawing.Size(0, 20)
         Me.txtCnt.TabIndex = 10
         '
-        'btnAlgo
-        '
-        Me.btnAlgo.Location = New System.Drawing.Point(274, 621)
-        Me.btnAlgo.Name = "btnAlgo"
-        Me.btnAlgo.Size = New System.Drawing.Size(179, 37)
-        Me.btnAlgo.TabIndex = 13
-        Me.btnAlgo.Text = "Pööra algorimiga"
-        Me.btnAlgo.UseVisualStyleBackColor = True
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(52, 569)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(179, 20)
-        Me.Label4.TabIndex = 12
-        Me.Label4.Text = "Pööramine algoritmiliselt"
-        '
-        'txtValjundTekst3
-        '
-        Me.txtValjundTekst3.Location = New System.Drawing.Point(274, 569)
-        Me.txtValjundTekst3.Name = "txtValjundTekst3"
-        Me.txtValjundTekst3.Size = New System.Drawing.Size(432, 26)
-        Me.txtValjundTekst3.TabIndex = 11
-        '
         'CheckBox
         '
         Me.CheckBox.AutoSize = True
@@ -172,15 +145,22 @@ Partial Class formKasutajaAken
         Me.CheckBox.Text = "Algoritmiline"
         Me.CheckBox.UseVisualStyleBackColor = True
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(868, 220)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(109, 20)
+        Me.Label4.TabIndex = 15
+        Me.Label4.Text = "Funktsiooniga"
+        '
         'formKasutajaAken
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1147, 772)
-        Me.Controls.Add(Me.CheckBox)
-        Me.Controls.Add(Me.btnAlgo)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.txtValjundTekst3)
+        Me.Controls.Add(Me.CheckBox)
         Me.Controls.Add(Me.txtCnt)
         Me.Controls.Add(Me.btnStop)
         Me.Controls.Add(Me.btnStart)
@@ -211,8 +191,6 @@ Partial Class formKasutajaAken
     Friend WithEvents btnStop As Button
     Friend WithEvents timerUuenda As Timer
     Friend WithEvents txtCnt As Label
-    Friend WithEvents btnAlgo As Button
-    Friend WithEvents Label4 As Label
-    Friend WithEvents txtValjundTekst3 As TextBox
     Friend WithEvents CheckBox As CheckBox
+    Friend WithEvents Label4 As Label
 End Class

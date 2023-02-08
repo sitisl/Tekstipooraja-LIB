@@ -1,5 +1,5 @@
 ﻿Public Class formKasutajaAken
-
+    Public algoFlag = True
 
     Private Function leiaTaishaalik(ByRef sisendTekst As String)
         Dim cnt As Integer
@@ -16,7 +16,11 @@
 
         Dim pooraja As Tekstipooraja_LIB.ITeisendused
 
-        pooraja = New Tekstipooraja_LIB.CTekstipooraja
+        If algoFlag = True Then
+            pooraja = New Tekstipooraja_LIB.CTekstipooraja
+        Else
+            pooraja = New Tekstipooraja_LIB.CAlgoritmiline
+        End If
 
         pooraja.strTekst = txtSisendtekst.Text
 
@@ -25,19 +29,15 @@
     End Sub
     Private Sub btnPoora2_Click(sender As Object, e As EventArgs) Handles btnPoora2.Click
         Dim pooraja As Tekstipooraja_LIB.ITeisendused
-        pooraja = New Tekstipooraja_LIB.CTekstipooraja
+        If algoFlag = True Then
+            pooraja = New Tekstipooraja_LIB.CTekstipooraja
+        Else
+            pooraja = New Tekstipooraja_LIB.CAlgoritmiline
+        End If
+
 
         pooraja.teisendaTekst(txtSisendtekst.Text)
         txtValjundTekst2.Text = pooraja.strTekst
-    End Sub
-    Private Sub btnAlgo_Click(sender As Object, e As EventArgs) Handles btnAlgo.Click
-        Dim pooraja As Tekstipooraja_LIB.ITeisendused
-
-        pooraja = New Tekstipooraja_LIB.CAlgoritmiline
-
-        pooraja.strTekst = txtSisendtekst.Text
-
-        txtValjundTekst3.Text = pooraja.pooraTekst()
     End Sub
 
     Private Sub btnStart_Click(sender As Object, e As EventArgs) Handles btnStart.Click
@@ -64,4 +64,13 @@
         txtCnt.Text = leiaTaishaalik(txtSisendtekst.Text)
     End Sub
 
+    Private Sub CheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox.CheckedChanged
+        If algoFlag = True Then
+            algoFlag = False
+            Label4.Text = "Algoritmiga"
+        Else
+            algoFlag = True
+            Label4.Text = "Funktsiooniga"
+        End If
+    End Sub
 End Class
