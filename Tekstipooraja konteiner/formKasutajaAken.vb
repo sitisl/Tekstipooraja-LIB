@@ -30,6 +30,15 @@
         pooraja.teisendaTekst(txtSisendtekst.Text)
         txtValjundTekst2.Text = pooraja.strTekst
     End Sub
+    Private Sub btnAlgo_Click(sender As Object, e As EventArgs) Handles btnAlgo.Click
+        Dim pooraja As Tekstipooraja_LIB.ITeisendused
+
+        pooraja = New Tekstipooraja_LIB.CAlgoritmiline
+
+        pooraja.strTekst = txtSisendtekst.Text
+
+        txtValjundTekst3.Text = pooraja.pooraTekst()
+    End Sub
 
     Private Sub btnStart_Click(sender As Object, e As EventArgs) Handles btnStart.Click
         timerUuenda.Enabled = True
@@ -52,7 +61,7 @@
     End Sub
 
     Private Sub txtSisendtekst_TextChanged(sender As Object, e As EventArgs) Handles txtSisendtekst.TextChanged
-        'txtCnt.Text = txtSisendtekst.Text.Length()
         txtCnt.Text = leiaTaishaalik(txtSisendtekst.Text)
     End Sub
+
 End Class

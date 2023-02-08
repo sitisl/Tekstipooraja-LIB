@@ -35,6 +35,10 @@ Partial Class formKasutajaAken
         Me.btnStop = New System.Windows.Forms.Button()
         Me.timerUuenda = New System.Windows.Forms.Timer(Me.components)
         Me.txtCnt = New System.Windows.Forms.Label()
+        Me.btnAlgo = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtValjundTekst3 = New System.Windows.Forms.TextBox()
+        Me.CheckBox = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'label1
@@ -55,14 +59,14 @@ Partial Class formKasutajaAken
         '
         'txtValjundTekst1
         '
-        Me.txtValjundTekst1.Location = New System.Drawing.Point(274, 334)
+        Me.txtValjundTekst1.Location = New System.Drawing.Point(274, 287)
         Me.txtValjundTekst1.Name = "txtValjundTekst1"
         Me.txtValjundTekst1.Size = New System.Drawing.Size(432, 26)
         Me.txtValjundTekst1.TabIndex = 2
         '
         'txtValjundTekst2
         '
-        Me.txtValjundTekst2.Location = New System.Drawing.Point(274, 521)
+        Me.txtValjundTekst2.Location = New System.Drawing.Point(274, 434)
         Me.txtValjundTekst2.Name = "txtValjundTekst2"
         Me.txtValjundTekst2.Size = New System.Drawing.Size(432, 26)
         Me.txtValjundTekst2.TabIndex = 3
@@ -70,7 +74,7 @@ Partial Class formKasutajaAken
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(55, 334)
+        Me.Label2.Location = New System.Drawing.Point(55, 287)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(184, 20)
         Me.Label2.TabIndex = 4
@@ -79,7 +83,7 @@ Partial Class formKasutajaAken
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(52, 521)
+        Me.Label3.Location = New System.Drawing.Point(52, 434)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(187, 20)
         Me.Label3.TabIndex = 5
@@ -87,7 +91,7 @@ Partial Class formKasutajaAken
         '
         'btnPoora1
         '
-        Me.btnPoora1.Location = New System.Drawing.Point(274, 381)
+        Me.btnPoora1.Location = New System.Drawing.Point(274, 334)
         Me.btnPoora1.Name = "btnPoora1"
         Me.btnPoora1.Size = New System.Drawing.Size(179, 35)
         Me.btnPoora1.TabIndex = 6
@@ -96,7 +100,7 @@ Partial Class formKasutajaAken
         '
         'btnPoora2
         '
-        Me.btnPoora2.Location = New System.Drawing.Point(274, 573)
+        Me.btnPoora2.Location = New System.Drawing.Point(274, 486)
         Me.btnPoora2.Name = "btnPoora2"
         Me.btnPoora2.Size = New System.Drawing.Size(179, 37)
         Me.btnPoora2.TabIndex = 7
@@ -133,11 +137,50 @@ Partial Class formKasutajaAken
         Me.txtCnt.Size = New System.Drawing.Size(0, 20)
         Me.txtCnt.TabIndex = 10
         '
+        'btnAlgo
+        '
+        Me.btnAlgo.Location = New System.Drawing.Point(274, 621)
+        Me.btnAlgo.Name = "btnAlgo"
+        Me.btnAlgo.Size = New System.Drawing.Size(179, 37)
+        Me.btnAlgo.TabIndex = 13
+        Me.btnAlgo.Text = "Pööra algorimiga"
+        Me.btnAlgo.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(52, 569)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(179, 20)
+        Me.Label4.TabIndex = 12
+        Me.Label4.Text = "Pööramine algoritmiliselt"
+        '
+        'txtValjundTekst3
+        '
+        Me.txtValjundTekst3.Location = New System.Drawing.Point(274, 569)
+        Me.txtValjundTekst3.Name = "txtValjundTekst3"
+        Me.txtValjundTekst3.Size = New System.Drawing.Size(432, 26)
+        Me.txtValjundTekst3.TabIndex = 11
+        '
+        'CheckBox
+        '
+        Me.CheckBox.AutoSize = True
+        Me.CheckBox.Location = New System.Drawing.Point(872, 183)
+        Me.CheckBox.Name = "CheckBox"
+        Me.CheckBox.Size = New System.Drawing.Size(120, 24)
+        Me.CheckBox.TabIndex = 14
+        Me.CheckBox.Text = "Algoritmiline"
+        Me.CheckBox.UseVisualStyleBackColor = True
+        '
         'formKasutajaAken
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1147, 772)
+        Me.Controls.Add(Me.CheckBox)
+        Me.Controls.Add(Me.btnAlgo)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.txtValjundTekst3)
         Me.Controls.Add(Me.txtCnt)
         Me.Controls.Add(Me.btnStop)
         Me.Controls.Add(Me.btnStart)
@@ -168,4 +211,8 @@ Partial Class formKasutajaAken
     Friend WithEvents btnStop As Button
     Friend WithEvents timerUuenda As Timer
     Friend WithEvents txtCnt As Label
+    Friend WithEvents btnAlgo As Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents txtValjundTekst3 As TextBox
+    Friend WithEvents CheckBox As CheckBox
 End Class
