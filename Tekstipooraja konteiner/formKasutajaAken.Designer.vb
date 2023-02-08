@@ -37,6 +37,9 @@ Partial Class formKasutajaAken
         Me.txtCnt = New System.Windows.Forms.Label()
         Me.CheckBox = New System.Windows.Forms.CheckBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'label1
@@ -57,6 +60,7 @@ Partial Class formKasutajaAken
         '
         'txtValjundTekst1
         '
+        Me.txtValjundTekst1.Enabled = False
         Me.txtValjundTekst1.Location = New System.Drawing.Point(274, 287)
         Me.txtValjundTekst1.Name = "txtValjundTekst1"
         Me.txtValjundTekst1.Size = New System.Drawing.Size(432, 26)
@@ -64,6 +68,7 @@ Partial Class formKasutajaAken
         '
         'txtValjundTekst2
         '
+        Me.txtValjundTekst2.Enabled = False
         Me.txtValjundTekst2.Location = New System.Drawing.Point(274, 434)
         Me.txtValjundTekst2.Name = "txtValjundTekst2"
         Me.txtValjundTekst2.Size = New System.Drawing.Size(432, 26)
@@ -130,7 +135,7 @@ Partial Class formKasutajaAken
         'txtCnt
         '
         Me.txtCnt.AutoSize = True
-        Me.txtCnt.Location = New System.Drawing.Point(713, 192)
+        Me.txtCnt.Location = New System.Drawing.Point(274, 138)
         Me.txtCnt.Name = "txtCnt"
         Me.txtCnt.Size = New System.Drawing.Size(0, 20)
         Me.txtCnt.TabIndex = 10
@@ -154,11 +159,40 @@ Partial Class formKasutajaAken
         Me.Label4.TabIndex = 15
         Me.Label4.Text = "Funktsiooniga"
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(274, 85)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(0, 20)
+        Me.Label5.TabIndex = 16
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(46, 85)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(99, 20)
+        Me.Label6.TabIndex = 17
+        Me.Label6.Text = "Kogu pikkus:"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(46, 138)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(131, 20)
+        Me.Label7.TabIndex = 18
+        Me.Label7.Text = "Täishäälikute arv:"
+        '
         'formKasutajaAken
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1147, 772)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.CheckBox)
         Me.Controls.Add(Me.txtCnt)
@@ -193,4 +227,7 @@ Partial Class formKasutajaAken
     Friend WithEvents txtCnt As Label
     Friend WithEvents CheckBox As CheckBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
 End Class

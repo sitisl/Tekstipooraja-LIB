@@ -43,6 +43,7 @@
     Private Sub btnStart_Click(sender As Object, e As EventArgs) Handles btnStart.Click
         timerUuenda.Enabled = True
         btnStart.Enabled = False
+        btnStop.Enabled = True
     End Sub
 
     Private Sub timerUuenda_Tick(sender As Object, e As EventArgs) Handles timerUuenda.Tick
@@ -58,10 +59,12 @@
     Private Sub btnStop_Click(sender As Object, e As EventArgs) Handles btnStop.Click
         timerUuenda.Enabled = False
         btnStart.Enabled = True
+        btnStop.Enabled = False
     End Sub
 
     Private Sub txtSisendtekst_TextChanged(sender As Object, e As EventArgs) Handles txtSisendtekst.TextChanged
         txtCnt.Text = leiaTaishaalik(txtSisendtekst.Text)
+        Label5.Text = txtSisendtekst.Text.Length()
     End Sub
 
     Private Sub CheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox.CheckedChanged
@@ -72,5 +75,13 @@
             algoFlag = True
             Label4.Text = "Funktsiooniga"
         End If
+    End Sub
+
+    Private Sub formKasutajaAken_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        btnStop.Enabled = False
+    End Sub
+
+    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+
     End Sub
 End Class
